@@ -8,10 +8,10 @@ import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div className="px-8 py-2">
+    <div className="py-2">
        <Navbar/>
        <hr/>
-       <div className="flex">
+       <div className="flex ">
          <SideBar/>
          <Routes>
           <Route path="/add" element={<Add/>}/>
