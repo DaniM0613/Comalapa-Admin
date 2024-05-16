@@ -4,10 +4,10 @@ import SideBar from "./components/SideBar/SideBar"
 
 const App = () => {
   return (
-    <div>
+    <div className="px-8 py-2">
        <Navbar/>
        <hr/>
-       <div className="">
+       <div className="flex">
          <SideBar/>
        </div>
     </div>

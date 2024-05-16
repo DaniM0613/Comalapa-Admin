@@ -2,9 +2,9 @@ import { assets } from '../../assets/assets'
 
 function Navbar() {
   return (
-    <div className=''>
-      <img className='' src={assets.logo} alt=''/>
-      <img className='' src={assets.profile_image} alt=''/>
+    <div className='flex justify-between items-center py-4'>
+      <img className='w-54' src={assets.logo} alt=''/>
+      <img className='w-20' src={assets.profile_image} alt=''/>
     </div>
   )
 }
