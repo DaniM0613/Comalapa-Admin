@@ -4,19 +4,23 @@ import List from './Pages/List/List'
 import Navbar from "./components/Navbar/Navbar"
 import SideBar from "./components/SideBar/SideBar"
 import { Routes, Route } from 'react-router-dom'
-
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
+
+  const url = 'http://localhost:4000'
   return (
     <div className="px-8 py-2">
+      <ToastContainer/>
        <Navbar/>
        <hr/>
        <div className="flex">
          <SideBar/>
          <Routes>
-          <Route path="/add" element={<Add/>}/>
-          <Route path="/list" element={<List/>}/>
-          <Route path="/orders" element={<Orders/>} />
+          <Route path="/add" element={<Add url={url}/>}/>
+          <Route path="/list" element={<List url={url}/>}/>
+          <Route path="/orders" element={<Orders url={url}/>} />
          </Routes>
        </div>
     </div>
