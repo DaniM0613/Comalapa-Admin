@@ -31,10 +31,10 @@ const List = ({url}) => {
     },[])
 
   return (
-    <div className=''>
+    <div className='w-full mx-6 mt-12  text-slate-600 text-xl max-sm:w-60 max-sm:text-xs max-sm:mt-6'>
       <p>All Foods List</p>
       <div className=''>
-        <div className=''>
+        <div className='grid grid-cols-5 items-center text-center gap-2.5 py-3 border-2 border-solid border-gray-600 text-sm bg-slate-400 max-sm:grid-cols-3 max-sm:gap-3 max-sm:hidden'>
           <b>Image</b>
           <b>Name</b>
           <b>Category</b>
@@ -43,12 +43,12 @@ const List = ({url}) => {
         </div>
         {list.map((item,index)=> {
            return(
-            <div key={index} className=''>
-              <img src={`${url}/images/`+item.image} alt=''/>
+            <div key={index} className=' grid grid-cols-5 items-center text-center gap-2.5 py-3 pl-2 border-2 border-solid border-gray-600 text-sm max-sm:text-xs '>
+              <img src={`${url}/images/`+item.image} alt='' className=' w-12'/>
               <p>{item.name}</p>
               <p>{item.category}</p>
               <p>${item.price}</p>
-              <p onClick={()=>removeFood(item._id)} className='cursor'>X</p>
+              <p onClick={()=>removeFood(item._id)} className='cursor-pointer bg-red-600 rounded-2xl mx-20 text-white font-bold text-center p-0.5 max-sm:mr-2 max-sm:ml-0 max-lg:mx-10 max-md:mx-8'>X</p>
             </div>
            )
         })}
