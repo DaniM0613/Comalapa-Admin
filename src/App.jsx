@@ -11,11 +11,11 @@ const App = () => {
 
   const url = 'http://localhost:4000'
   return (
-    <div className="px-8 py-2">
+    <div className="py-2">
       <ToastContainer/>
        <Navbar/>
        <hr/>
-       <div className="flex">
+       <div className="flex ">
          <SideBar/>
          <Routes>
           <Route path="/add" element={<Add url={url}/>}/>

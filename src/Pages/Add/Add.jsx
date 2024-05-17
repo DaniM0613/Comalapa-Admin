@@ -43,27 +43,27 @@ const Add = ({url}) => {
      }
 
   return (
-    <div className=''>
-      <form className='flex-col' onSubmit={onSubmitHandler}>
-        <div className=' flex-col'>
+    <div className='w-full ml-6 mt-12 text-slate-600 text-xl'>
+      <form className='flex flex-col gap-5' onSubmit={onSubmitHandler}>
+        <div className='flex flex-col gap-2.5'>
            <p>Upload Image</p>
            <label htmlFor='image'>
-             <img src={image?URL.createObjectURL(image):assets.upload_area} alt=''/>
+             <img src={image?URL.createObjectURL(image):assets.upload_area} alt='' className=' w-32 border-2 border-orange-700 border-solid'/>
            </label>
             <input onChange={(e)=>setImage(e.target.files[0])} type='file' id='image' hidden required/>
         </div>
-        <div className=' flex-col'>
+        <div className=' w-96 flex flex-col gap-2.5'>
             <p>Product Name</p>
-            <input onChange={onChangeHandler} value={data.name} type='text' name='name' placeholder='type here'/>
+            <input onChange={onChangeHandler} value={data.name} type='text' name='name' placeholder='type here' className=' p-2 border-2 border-orange-700 border-solid'/>
         </div>
-        <div className='flex-col'>
+        <div className=' w-96 flex flex-col gap-2.5'>
             <p>Product Description</p>
-            <textarea onChange={onChangeHandler} value={data.description} name='description' rows='6' placeholder='Write Contect Here' required></textarea>
+            <textarea onChange={onChangeHandler} value={data.description} name='description' rows='6' placeholder='Write Contect Here' required className='p-2 border-2 border-orange-700 border-solid'></textarea>
         </div>
-        <div className=''>
-            <div className='flex-col'>
+        <div className=' flex gap-7'>
+            <div className='flex flex-col gap-2.5'>
                 <p>Product category</p>
-                <select onChange={onChangeHandler} name='category'>
+                <select onChange={onChangeHandler} name='category' className=' max-w-32 p-2 border-2 border-orange-700 border-solid'>
                     <option value='Very Utz'>Very Utz</option>
                     <option value="TZ'INAKAN">TZ'INAKAN</option>
                     <option value='Pizzería Napoli'>Pizzería Napoli</option>
@@ -75,12 +75,12 @@ const Add = ({url}) => {
                     <option value="Cuate's PIZZA">Cuate's PIZZA</option>
                 </select>
             </div>
-            <div className=''>
+            <div className='flex flex-col gap-2.5'>
                <p>Product price</p> 
-               <input onChange={onChangeHandler} value={data.price} type='number' name='price' placeholder='Q.20'/>
+               <input onChange={onChangeHandler} value={data.price} type='number' name='price' placeholder='Q.20' className=' max-w-32 p-2 border-2 border-orange-700 border-solid'/>
             </div>
         </div>
-         <button type='submit' className=''>ADD</button>
+         <button type='submit' className='bg-black text-white p-4 w-32'>ADD</button>
       </form>
       
     </div>
