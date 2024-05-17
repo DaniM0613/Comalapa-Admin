@@ -43,7 +43,7 @@ const Add = ({url}) => {
      }
 
   return (
-    <div className='w-full ml-6 mt-12 text-slate-600 text-xl'>
+    <div className='w-full ml-6 mt-12 text-slate-600 text-xl max-sm:w-52 max-sm:text-xs'>
       <form className='flex flex-col gap-5' onSubmit={onSubmitHandler}>
         <div className='flex flex-col gap-2.5'>
            <p>Upload Image</p>
@@ -52,15 +52,15 @@ const Add = ({url}) => {
            </label>
             <input onChange={(e)=>setImage(e.target.files[0])} type='file' id='image' hidden required/>
         </div>
-        <div className=' w-96 flex flex-col gap-2.5'>
+        <div className=' w-96 flex flex-col gap-2.5 max-sm:w-52 '>
             <p>Product Name</p>
             <input onChange={onChangeHandler} value={data.name} type='text' name='name' placeholder='type here' className=' p-2 border-2 border-orange-700 border-solid'/>
         </div>
-        <div className=' w-96 flex flex-col gap-2.5'>
+        <div className=' w-96 flex flex-col gap-2.5 max-sm:w-52'>
             <p>Product Description</p>
             <textarea onChange={onChangeHandler} value={data.description} name='description' rows='6' placeholder='Write Contect Here' required className='p-2 border-2 border-orange-700 border-solid'></textarea>
         </div>
-        <div className=' flex gap-7'>
+        <div className=' flex gap-7 max-sm:gap-3'>
             <div className='flex flex-col gap-2.5'>
                 <p>Product category</p>
                 <select onChange={onChangeHandler} name='category' className=' max-w-32 p-2 border-2 border-orange-700 border-solid'>
@@ -80,7 +80,7 @@ const Add = ({url}) => {
                <input onChange={onChangeHandler} value={data.price} type='number' name='price' placeholder='Q.20' className=' max-w-32 p-2 border-2 border-orange-700 border-solid'/>
             </div>
         </div>
-         <button type='submit' className='bg-black text-white p-4 w-32'>ADD</button>
+         <button type='submit' className='bg-black text-white p-4 w-32 max-sm:p-2'>ADD</button>
       </form>
       
     </div>
