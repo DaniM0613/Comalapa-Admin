@@ -32,7 +32,7 @@ const List = ({url}) => {
 
   return (
     <div className='w-full mx-6 mt-12  text-slate-600 text-xl max-sm:w-60 max-sm:text-xs max-sm:mt-6'>
-      <p>All Foods List</p>
+      <p className='mb-4 font-bold text-black'>All Foods List</p>
       <div className=''>
         <div className='grid grid-cols-5 items-center text-center gap-2.5 py-3 border-2 border-solid border-gray-600 text-sm bg-slate-400 max-sm:grid-cols-3 max-sm:gap-3 max-sm:hidden'>
           <b>Image</b>
