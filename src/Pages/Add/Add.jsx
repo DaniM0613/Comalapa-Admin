@@ -46,7 +46,7 @@ const Add = ({url}) => {
     <div className='w-full ml-6 mt-12 text-slate-600 text-xl max-sm:w-52 max-sm:text-xs'>
       <form className='flex flex-col gap-5' onSubmit={onSubmitHandler}>
         <div className='flex flex-col gap-2.5'>
-           <p>Upload Image</p>
+           <p className='mb-4 font-bold text-black'>Upload Image</p>
            <label htmlFor='image'>
              <img src={image?URL.createObjectURL(image):assets.upload_area} alt='' className=' w-32 border-2 border-orange-700 border-solid'/>
            </label>
